@@ -11,6 +11,10 @@ print(YELLOW + "|" + RESET + " Pour utiliser le programme vous devez entrer une 
 print(YELLOW + "|" + RESET + " mais entre chaque caractère vous devez mettre un ESPACE.                           " + YELLOW + "|" + RESET)
 print(YELLOW + "|" + RESET + " Exemple : 2 + 3 * 4                                                                " + YELLOW + "|" + RESET)
 print(YELLOW + "|" + RESET + " Exemple : 2 + ( 3 + 4 + 6 ) * 5                                                    " + YELLOW + "|" + RESET)
+print(YELLOW + "|" + RESET + " Pour les nombre negatif il faut coller l'operateur au nombre                       " + YELLOW + "|" + RESET)
+print(YELLOW + "|" + RESET + " Exemple : 2 + -3 * 4                                                               " + YELLOW + "|" + RESET)   
+print(YELLOW + "|" + RESET + " Exemple : 2 + ( 3 + 4 + -6 ) * 5                                                   " + YELLOW + "|" + RESET) 
+print(YELLOW + "|" + RESET + " Exemple : -3 - 4 - 2 i faut faire -3 + -4 + -2                                     " + YELLOW + "|" + RESET)
 print(YELLOW + "<" + "=" * 84 + ">" + RESET)
 print()
 
