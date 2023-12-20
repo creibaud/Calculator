@@ -108,7 +108,7 @@ def transcription(userInput):
                     pile.push(elt)
                     break
             pile.push(char)                         # On empile l'opérateur + pour le mettre en temps que opérateur non prioritaire
-        
+
         if char == ")":                             # Si le caractère est une parenthèse fermante
             while not pile.isEmpty():               # Tant que la pile n'est pas vide on dépile
                 elt = pile.pop()
