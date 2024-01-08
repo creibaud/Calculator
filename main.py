@@ -1,3 +1,4 @@
+"""
 from Calculator import calculator
 from tools import transcription
 
@@ -22,3 +23,9 @@ userInput = input(f"Entrer une expression mathématique : \033[94m")     # Exemp
 tradInput = transcription(userInput)                                    # Exemple : 2 3 4 * +
 result = calculator(tradInput)                                          # Exemple : 14
 print(f"{RESET}On a : {userInput} = {result}")                          # Exemple : 2 + 3 * 4 = 14
+"""
+
+from UI import UI
+
+ui = UI()
+ui.run()

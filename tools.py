@@ -52,7 +52,7 @@ def roundFloat(number, decimal=None):
         
         # On arrondie ce qui permet la réduction du nombre (ex: 2.30000000000001 -> 2.3)
         if int(decimalPart[index]) >= 5:
-            decimalPart = decimalPart[:index - 2] + str(int(decimalPart[index] - 1) + 1)
+            decimalPart = decimalPart[:index - 2] + str(int(decimalPart[index - 1]) + 1)
         else:
             decimalPart = decimalPart[:index]
     elif decimal == 0:                              # On arrondie a l'entier le plus proche
@@ -60,7 +60,7 @@ def roundFloat(number, decimal=None):
             listChar[0] = str(int(listChar[0]) + 1)
         decimalPart = ""
     else:                                           # On arrondie au nombre de décimales précisé
-        if int(decimalPart[decimal]) >= 5:
+        if decimal < len(decimalPart) and int(decimalPart[decimal]) >= 5:
             decimalPart = decimalPart[:decimal - 1] + str(int(decimalPart[decimal]) + 1)
         else:
             decimalPart = decimalPart[:decimal - 1]
