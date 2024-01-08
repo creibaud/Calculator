@@ -42,11 +42,20 @@ class UI:
             self.entry.insert(tk.END, "-")
         elif char == ".":
             self.strResult = self.strResult[:-1]
+            self.entry.delete(0, tk.END)
+            self.entry.insert(0, self.strResult)
             self.strResult += "."
             self.entry.insert(tk.END, ".")
         else:
-            self.strResult += char + " "
-            self.entry.insert(tk.END, char + " ")
+            if len(self.strResult) > 1 and self.strResult[len(self.strResult) - 2] in "0123456789":
+                self.strResult = self.strResult[:-1]
+                self.entry.delete(0, tk.END)
+                self.entry.insert(0, self.strResult)
+                self.strResult += char + "  "
+                self.entry.insert(tk.END, char + "  ")
+            else: 
+                self.strResult += char + " "
+                self.entry.insert(tk.END, char + " ")
 
     def deleteChar(self):
         self.entry.delete(0, tk.END)
